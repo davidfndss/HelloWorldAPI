@@ -413,7 +413,7 @@ const swaggerSetup = (app) => {
             }
           }
         },
-        "/signin": {
+        "/auth/signin": {
           "post": {
             "summary": "Login to NewsParrot",
             "description": "Route responsible for logging in a registered user",
