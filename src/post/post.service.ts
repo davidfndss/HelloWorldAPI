@@ -47,7 +47,14 @@ export class PostService {
     }
   }
 
-  async findAllPostsService(offset: number, limit: number, currentUrl: string) {
+  async findAllPostsService(offset: number, limit: number, currentUrl: string): Promise<{
+    nextUrl: string | null,
+    previousUrl: string | null ,
+    offset: number,
+    limit: number,
+    total: number,
+    results: PostDto[],
+  }> {
     if (!offset) offset = 0
     if (!limit) limit = 20
     const posts = await this.prisma.post.findMany({
@@ -79,9 +86,11 @@ export class PostService {
         body: item.body,
         likes: item.likes,
         comments: item.comments,
-        name: item.user.name,
-        username: item.user.username,
-        avatar: item.user.avatar,
+        user: {
+          name: item.user.name,
+          username: item.user.username,
+          avatar: item.user.avatar
+        }
       })),
     };
   }
