@@ -24,7 +24,7 @@ export class PostController {
   }
 
   @UseGuards(AuthGuard)
-  @Get(':id')
+  @Get('find-by-id/:id')
   findOne(@Param('id') id: string): Promise<PostDto> {
     return this.postService.findOnePostService(id);
   }

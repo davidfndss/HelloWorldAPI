@@ -556,9 +556,9 @@ const swaggerSetup = (app) => {
             }
           }
         },
-        "/post/{id}": {
-          "patch": {
-            "summary": "Search post by id",
+        "/post/find-by-id/{id}": {
+          "get": {
+            "summary": "Find post by id",
             "description": "Route responsible for fetching a post by id",
             "tags": ["Post"],
             "security": [{ "bearerAuth": [] }],
@@ -595,7 +595,7 @@ const swaggerSetup = (app) => {
             }
           }
         },
-        "/post/update/{id}": {
+        "/post/{id}/update": {
           "patch": {
             "summary": "Update Post",
             "description": "Route responsible for updating a Post",
@@ -655,7 +655,7 @@ const swaggerSetup = (app) => {
             }
           }
         },
-        "/post/delete/{id}": {
+        "/post/{id}/delete": {
           "delete": {
             "summary": "Delete Post",
             "description": "Route responsible for deleting Post, if the user is authorized",
