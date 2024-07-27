@@ -1,4 +1,13 @@
+<h1 align="center">API: HelloWorld 🌎</h1>
 
+HelloWorld is a social media platform for posts, the api is actually hosted on Render ( links Bellow )
+
+### 🌐 [Access and consume the API](https://helloworldapi-lthq.onrender.com)
+### 📄 [Read the API Docs on Swagger](https://helloworldapi-lthq.onrender.com)
+### 🖥️ [Front-End: SPA (Single page Application) Github Repo](https://github.com/davidfndss/HelloWorldSPA)
+<hr>
+
+![HelloWorld swagger doc](https://github.com/user-attachments/assets/8d1c81b5-00f2-40ed-862b-c19156e39eab)
 
 ## Installation
 
